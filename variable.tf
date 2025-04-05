@@ -29,7 +29,7 @@ variable "email_endpoint" {
 variable "function_name" {
   description = "The name of the Lambda function."
   type        = string
-  default     = "image_processing_lambda"
+  default     = "image_lambda_function"
 
 }
 
