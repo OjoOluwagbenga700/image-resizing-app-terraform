@@ -3,8 +3,9 @@ resource "aws_s3_bucket" "source_bucket" {
   tags = {
     Name = var.source_bucket_name
   }
+  force_destroy = true
   lifecycle {
-    prevent_destroy =false
+    prevent_destroy = false
   }
 
 }
@@ -13,6 +14,7 @@ resource "aws_s3_bucket" "destination_bucket" {
   tags = {
     Name = var.destination_bucket_name
   }
+  force_destroy = true
   lifecycle {
     prevent_destroy = false
   }

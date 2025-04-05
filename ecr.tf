@@ -10,12 +10,12 @@ resource "docker_image" "image" {
   build {
     context    = "${path.module}/src"
     dockerfile = "Dockerfile"
-    
+
   }
-  depends_on = [ aws_ecr_repository.ecr_repo ]
+  depends_on = [aws_ecr_repository.ecr_repo]
 }
 # Push docker image to ECR repo
 resource "docker_registry_image" "image" {
-  name = docker_image.image.name
-depends_on = [ docker_image.image ]
+  name       = docker_image.image.name
+  depends_on = [docker_image.image]
 }

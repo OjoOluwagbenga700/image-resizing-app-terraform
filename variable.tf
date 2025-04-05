@@ -47,5 +47,17 @@ variable "repository_name" {
 
 }
 
+variable "target_width" {
+  description = "The target width for the resized image."
+  type        = number
+  default     = 800
+
+}
+variable "target_height" {
+  description = "The target height for the resized image."
+  type        = number
+  default     = 600
+
+}
 
 
