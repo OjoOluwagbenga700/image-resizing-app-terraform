@@ -1,4 +1,4 @@
-
+# This file contains the configuration for the AWS Lambda function that will be triggered by the S3 bucket events.
 resource "aws_lambda_function" "lambda_function" {
   package_type  = "Image"
   image_uri     = "${aws_ecr_repository.ecr_repo.repository_url}:latest"
